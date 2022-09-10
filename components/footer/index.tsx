@@ -51,16 +51,16 @@ const Footer = () => {
 
                 <div className='footerWrapper__ctas__grid'>
                     {
-                        footerLinks.map((link) => {
+                        footerLinks.map((link, i) => {
                             return (
-                                <div>
+                                <div key={i}>
                                     <h3>{link.category}</h3>
                                     <div>
                                         <ul>
                                             {
-                                                link.links.map((cta) => {
+                                                link.links.map((cta, i) => {
                                                     return (
-                                                        <li>
+                                                        <li key={i}>
                                                             <Link href="/">
                                                             {cta.name}
                                                             </Link>
@@ -71,9 +71,9 @@ const Footer = () => {
                                             <h3 className='subCategory'>{link?.subCategory}</h3>
                                             <ul>
                                                 {
-                                                    link?.subLinks?.map((sub) => {
+                                                    link?.subLinks?.map((sub, i) => {
                                                         return(
-                                                            <li>
+                                                            <li key={i}>
                                                                 <Link href="/">
                                                                     {sub.name}
                                                                 </Link>
@@ -85,9 +85,9 @@ const Footer = () => {
                                             <h3 className='subCategory'>{link?.doubleSubCategory}</h3>
                                             <ul>
                                                 {
-                                                    link?.doubleSubLinks?.map((sub) => {
+                                                    link?.doubleSubLinks?.map((sub, i) => {
                                                         return(
-                                                            <li>
+                                                            <li key={i}>
                                                                 <Link href="/">
                                                                     {sub.name}
                                                                 </Link>
@@ -99,9 +99,9 @@ const Footer = () => {
                                             <h3 className='subCategory'>{link?.tripleSubCategory}</h3>
                                             <ul>
                                                 {
-                                                    link?.tripleSubLinks?.map((sub) => {
+                                                    link?.tripleSubLinks?.map((sub, i) => {
                                                         return(
-                                                            <li>
+                                                            <li key={i}>
                                                                 <Link href="/">
                                                                     {sub.name}
                                                                 </Link>
