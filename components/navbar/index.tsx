@@ -5,7 +5,6 @@ import { ctas } from '../../mock/navLinks';
 import { BsChevronRight } from 'react-icons/bs';
 import useToggle from '../../hook';
 import MobileNavBar from '../mobile-navbar';
-import { AiOutlineMenu } from "react-icons/ai";
 
 
 const Header = () => {
@@ -14,16 +13,8 @@ const Header = () => {
 
     return (
         <>
-            <button
-                name="Hamburger"
-                aria-label="Hamburger"
-                className="hamburger"
-                onClick={() => dispatch("on")}
-            >
-                <AiOutlineMenu/>
-            </button>   
 
-            {state === "on" && <MobileNavBar dispatch={dispatch} />}
+            <MobileNavBar dispatch={dispatch} />
 
             <div className='navbar'>
                 <div className='navbar__wrapper'>

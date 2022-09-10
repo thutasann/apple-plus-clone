@@ -1,6 +1,6 @@
 @layer components{
     .navbar{
-        @apply hidden md:flex bg-bg-apple-black p-1;
+        @apply hidden lg:flex bg-bg-apple-black p-1;
         &__wrapper{
             @apply max-w-[1380px] mx-auto flex items-center justify-center space-x-[50px];
             &__logo{
@@ -22,7 +22,7 @@
     }
 
     .secNavbar{
-        @apply sticky z-30 hidden md:flex items-center justify-center p-2 border-b-[0.4px] border-b-[#b2b1b1] w-full bg-bg-apple-black-board;
+        @apply sticky top-0 z-30 hidden lg:flex items-center justify-center p-2 border-b-[0.4px] border-b-[#b2b1b1] w-full bg-bg-apple-black-board;
         &__wrapper{
             @apply w-[1000px] mx-auto flex items-center justify-between space-x-[50px];
             &__logo{
@@ -37,7 +37,7 @@
     }
 
     .thirdNav{
-        @apply hidden md:flex items-center justify-center z-30 bg-bg-apple-black-board w-full p-5;
+        @apply hidden lg:flex items-center justify-center z-30 bg-bg-apple-black-board w-full p-5;
         &__content{
             @apply flex items-center justify-center space-x-2;
             & p{
@@ -55,10 +55,9 @@
 
     }
 
-    .hamburger{
-        @apply grid -ml-1 cursor-pointer pointer-events-auto w-14 aspect-square place-items-center lg:hidden lg:pointer-events-none;
-            & svg{
-                @apply fill-[#1FFF0F] w-[35px] h-[35px] hover:fill-[#4dff7f];
-            }
+    .hamburgerBg{
+        @apply bg-bg-apple-black w-full;
     }
+
+    
 }

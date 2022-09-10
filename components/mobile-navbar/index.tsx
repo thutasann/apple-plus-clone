@@ -1,59 +1,103 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link';
-import { BsList, BsSearch } from "react-icons/bs";
-import { AiOutlineClose } from "react-icons/ai";
-
+import { AiOutlineMenu, AiFillApple, AiOutlineClose, AiOutlineShopping, AiOutlineSearch } from "react-icons/ai";
+import { BsChevronRight } from 'react-icons/bs';
+import { ctas } from '../../mock/navLinks';
 
 function MobileNavBar({ dispatch }) {
+
+    const [ show, setShow ] = useState(false);
+
     return (
-        <dialog className='modal'>
-            <button
-                aria-label="Close"
-                className="modal__close"
-                onClick={() => {
-                    dispatch("off");
-                }}
-            >
-                <AiOutlineClose/>
-            </button>
-            <nav className="modal__navigation">
+        <div className='mobileNav'>
+            <div className='mobileNav__first'>
+                {
+                    !show ? (
+                        <button
+                            name="Hamburger"
+                            aria-label="Hamburger"
+                            className="hamburger"
+                            onClick={() => setShow(true)}
+                        >
+                            <AiOutlineMenu/>
+                        </button> 
+                    ) : (
+                        <button
+                            name="Hamburger"
+                            aria-label="Hamburger"
+                            className="hamburger"
+                            onClick={() => setShow(false)}
+                        >
+                            <AiOutlineClose/>
+                        </button> 
+                    )
+                }
 
-                {/* explore */}
-                <div className='modal__navigation__explore'>
-                    <div className='modal__navigation__explore__category'>
-                        <BsList/>
-                        <span className='goblin-p'>
-                            World of Warcraft
-                        </span>
+                <div className={`${show ? 'mr-[50px]' : 'ml-0'} mobileNav__first__logo`}>
+                    <AiFillApple/>
+                </div> 
+
+                <div className='mobileNav__first__shop'>
+                    { !show && <AiOutlineShopping/>}
+                </div> 
+            </div> 
+
+
+            {/* dropdown navbar */}
+            {
+                show && (
+                    <div className='mobileDropdwon'>
+                        <div className='mobileDropdwon__search'>
+                            <AiOutlineSearch size={22} fill="#b2b1b1"/>
+                            <input type="text" placeholder='Search apple.com' />
+                        </div>  
+                        <div className='mobileDropdwon__divider'/>
+                        <div className='mobileDropdwon__ctas'>
+                            {
+                                ctas.map((item, key) => {
+                                    return (
+                                        <Link href="/" key={key}>
+                                            {item.name}
+                                        </Link>
+                                    )
+                                })
+                            }
+                        </div>
                     </div>
+                )
+            }
 
-                    <div className='modal__navigation__explore__searchBox'>
-                        <input
-                            placeholder='Search'
-                            type="text"
-                        />
-                        <BsSearch/>
+
+            <div className='mobileNav__sec'>
+                <div className='mobileNav__sec__wrapper'>
+                    <div className='mobileNav__sec__wrapper__logo'>
+                        <Link href="/">
+                            Apple TV +
+                        </Link>
+                    </div>
+                    <div className='mobileNav__sec__wrapper__stream'>
+                        <Link href="/">
+                            Stream now
+                        </Link>
                     </div>
                 </div>
+            </div>
 
-                {/* links */}
-                <div className='modal__navigation__links'>
-                    <Link href="/work-with-us/">Work With Us</Link>
-                    <Link href="/offers/">Offers</Link>
-                </div>
-
-                {/* auth links */}
-                <div className='modal__navigation__auths'>
-                    <Link href="/sign-in/" className='headerWrapper__auths__signIn'>
-                        Sign in
-                    </Link>
-                    <Link href="/sign-up/" className='headerWrapper__auths__signUp'>
-                        Sign Up
+            <div className='mobileNav__third'>
+                <div className='mobileNav__third__content'>
+                    <p>
+                        Friday Night Baseball, now streaming on Apple TV+.
+                    </p>
+                    <Link href="/" className='mobileNav__third__content__cta'>
+                        <span className='mobileNav__third__content__cta__span'>
+                            Learn more
+                            <BsChevronRight fill='#0071e3' size={14}/>
+                        </span> 
                     </Link>
                 </div>
+            </div>
 
-            </nav>
-        </dialog>
+        </div>
     )
 }
 
