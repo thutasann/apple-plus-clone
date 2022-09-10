@@ -8,7 +8,7 @@ export default function Home() {
     description:"Apple TV+ features critically acclaimed Apple Original shows and movies. Watch on the Apple&nbsp;TV app across devices.",
     keywords: "Hsu Ye Ywel, Project Coordinator, Web Developer, Scrum Master, Medical Student, Yoma Fleet, Myanmar",
     url: "https://hsuyeywel.vercel.app/",
-    image: "/apple-fav.png",
+    image: "/apple.png",
     ogimage: "/apple-social-share.png"
   }
   
