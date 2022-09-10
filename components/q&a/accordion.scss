@@ -3,7 +3,7 @@
         @apply mt-[40px] max-w-[1000px] mx-auto px-4;
         &__question{
             @apply relative z-20 px-1 py-2 bg-white cursor-pointer focus:bg-red-500
-            text-gray-800 text-[24px] font-[600] leading-[28px]
+            text-gray-800 text-[18px] md:text-[24px] font-[600] leading-[28px]
             flex items-center justify-between pb-5;
         }
         &__answer{

@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import About from '../components/about';
+import Footer from '../components/footer';
 import Hero from '../components/hero';
 import NavBar from '../components/navbar';
 import QandA from '../components/q&a';
@@ -41,7 +42,7 @@ export default function Home() {
       <Hero/>
       <About/>
       <QandA/>
-
+      <Footer/>
     </>
   )
 }

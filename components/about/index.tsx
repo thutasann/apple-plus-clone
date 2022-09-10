@@ -20,7 +20,7 @@ const About = () => {
                 </h1>
                 <p>
                     Find the Apple TV app on your favorite Apple devices. <br/>
-                    Or watch Apple TV+ online at <Link href="https://tv.apple.com/">tv.apple.com</Link>.
+                    Or watch Apple TV+ online at <Link href="/tv">tv.apple.com</Link>.
                 </p>
             </div>
 

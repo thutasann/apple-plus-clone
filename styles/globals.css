@@ -1,10 +1,14 @@
-/* components css */
+/* components scss */
 @import "../components/navbar/index.scss";
 @import "../components/mobile-navbar/index.scss";
 @import "../components/hero/index.scss";
 @import "../components/about/index.scss";
 @import "../components/q&a/index.scss";
 @import "../components/q&a/accordion.scss";
+@import "../components/footer/index.scss";
+
+/* page scss */
+@import "../pages/tv/index.scss";
 
 
 

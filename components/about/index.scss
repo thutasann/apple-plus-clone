@@ -12,7 +12,7 @@
             & p{
                 @apply text-[17px] font-[400] leading-[25px] text-center text-[#1d1d1f] mt-4;
                 a{
-                    @apply text-[#2a75d2]
+                    @apply text-[#2a75d2] hover:underline;
                 }
             }
         }

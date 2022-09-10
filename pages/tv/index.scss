@@ -1,0 +1,10 @@
+@layer components{
+    .tvWrapper{
+        @apply  py-7 border;
+        &__link{
+            &__cta{
+                @apply flex items-center justify-center cursor-pointer hover:underline text-[#2a75d2];
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+@layer components{
+    .footerWrapper{
+        @apply w-full h-auto bg-[#f5f4f7] pb-[58px] px-4;
+        &__content{
+            @apply max-w-[900px] mx-auto flex flex-col items-center pt-5
+            text-[12px] font-[400] leading-[16px] text-[#6e6e73d9];
+            &__heading{
+                @apply border-b border-gray-300;
+                & p{
+                    @apply my-4
+                }
+                & ul{
+                    li{
+                        @apply my-3
+                    }
+                }
+            }
+        }
+
+        &__ctas{
+            @apply max-w-[900px] mx-auto flex flex-col pt-5 text-[12px] font-[400] leading-[16px] text-[#6e6e73d9];
+            &__breadcrumb{
+                @apply flex items-center space-x-2;
+                &__logo{
+                    @apply hover:fill-red-600 cursor-pointer;
+                }
+                & a{
+                    @apply hover:underline;
+                    & svg{
+                        @apply cursor-pointer;
+                    }
+                }
+            }
+
+            &__grid{
+                @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 mt-[30px] gap-x-[20px];
+                & h3{
+                    @apply text-[#010101] font-[700]
+                }
+                & ul{
+                    & li{
+                        @apply my-2;
+                        & a{
+                            @apply hover:underline;
+                        }
+                    }
+                }
+                .subCategory{
+                    @apply mt-5
+                }
+            }
+
+            &__shop{
+                @apply mt-[30px];
+                & p{
+                    & a{
+                        @apply text-[#06c] mx-[2px] hover:underline;
+                    }
+                }
+            }
+
+            &__copyright{
+                @apply mt-[20px] border-t border-gray-300 flex flex-col md:flex-row items-start md:items-center justify-between pt-3;
+                &__laws{
+                    @apply flex flex-col md:flex-row items-start md:items-center space-x-0 md:space-x-[20px];
+                    & a{
+                        @apply border-r border-gray-300 px-3;
+                    }
+                    & a:first-child{
+                        @apply pl-0;
+                    }
+                    & a:last-child{
+                        @apply border-r-0;
+                    }
+                }
+                &__united{
+                    @apply mt-[20px] md:mt-0;
+                }
+            }
+        }
+
+
+    }
+}
