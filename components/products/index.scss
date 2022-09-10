@@ -1,0 +1,44 @@
+@layer components{
+    .productWrapper{
+        @apply max-w-[1380px] mx-auto px-4 mb-7;
+        &__pack{
+            @apply flex flex-col-reverse lg:flex-row items-center lg:items-start justify-center md:justify-around bg-[#f5f4f7] mb-7 p-[20px] md:p-[90px] h-auto;
+            &__media{
+                @apply relative mt-[40px] lg:mt-0 ml-[40px] lg:ml-0;
+            }
+            &__content{
+                @apply  flex-1 flex flex-col items-center space-y-[30px];
+                & h1{
+                    @apply text-[20px] md:text-[40px] font-[700] leading-[44px] text-center;
+                }
+                &__try{
+                    & a{
+                        @apply bg-[#1d1d1f] hover:bg-[#010101] rounded-[100px] px-5 py-3 text-center text-white;
+                    }
+                }
+            }
+        }
+
+        &__grid{
+            @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+            &__card{
+                @apply flex flex-col items-start justify-around bg-[#f5f4f7] mb-7 p-[90px];
+                &__heading{
+                    @apply flex flex-col items-center space-y-3;
+                    & h3{
+                        @apply text-[30px] font-[700] leading-[25px] text-center;
+                    }
+                    & h1{
+                        @apply text-[20px] md:text-[40px] font-[700] leading-[44px] text-center;
+                    }
+                    &__ctaGrid{
+                        @apply flex items-center space-x-3;
+                        &__buyCta{
+                            @apply bg-[#0370e3] hover:bg-[#1c6cc0] text-white rounded-[100px] px-4 py-1 cursor-pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

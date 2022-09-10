@@ -3,6 +3,7 @@ import About from '../components/about';
 import Footer from '../components/footer';
 import Hero from '../components/hero';
 import NavBar from '../components/navbar';
+import Products from '../components/products';
 import QandA from '../components/q&a';
 
 export default function Home() {
@@ -42,6 +43,7 @@ export default function Home() {
       <Hero/>
       <About/>
       <QandA/>
+      <Products/>
       <Footer/>
     </>
   )

@@ -6,6 +6,7 @@
 @import "../components/q&a/index.scss";
 @import "../components/q&a/accordion.scss";
 @import "../components/footer/index.scss";
+@import "../components/products/index.scss";
 
 /* page scss */
 @import "../pages/tv/index.scss";

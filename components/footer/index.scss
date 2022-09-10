@@ -33,7 +33,7 @@
             }
 
             &__grid{
-                @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 mt-[30px] gap-x-[20px];
+                @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mt-[30px] gap-x-[20px];
                 & h3{
                     @apply text-[#010101] font-[700]
                 }
