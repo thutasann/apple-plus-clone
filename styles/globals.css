@@ -1,6 +1,7 @@
 /* components css */
 @import "../components/navbar/index.scss";
 @import "../components/mobile-navbar/index.scss";
+@import "../components/hero/index.scss";
 
 
 @tailwind base;
