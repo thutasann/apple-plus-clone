@@ -22,7 +22,7 @@
     }
 
     .secNavbar{
-        @apply sticky top-0 z-30 hidden lg:flex items-center justify-center p-2 border-b-[0.4px] border-b-[#b2b1b1] w-full bg-bg-apple-black-board;
+        @apply sticky top-0 z-30 hidden lg:flex items-center justify-center p-2 w-full bg-bg-apple-black-board;
         &__wrapper{
             @apply w-[1000px] mx-auto flex items-center justify-between space-x-[50px];
             &__logo{
@@ -37,7 +37,7 @@
     }
 
     .thirdNav{
-        @apply hidden lg:flex items-center justify-center z-30 bg-bg-apple-black-board w-full p-5;
+        @apply hidden lg:flex items-center border-t-[0.4px] border-b-[#b2b1b1] justify-center z-30 bg-bg-apple-black-board w-full p-5;
         &__content{
             @apply flex items-center justify-center space-x-2;
             & p{

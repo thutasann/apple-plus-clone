@@ -1,5 +1,28 @@
 @layer components{
     .heroWrapper{
-        @apply w-full h-full;
+        @apply bg-transparent;
+    }
+
+    .streamNow{
+        @apply absolute left-[10%] top-[5%];
+        & h1{
+            @apply text-[6em] text-white font-[700] leading-[6rem] mb-[50px]
+        }
+        & a{
+            @apply bg-[#fff] rounded-[50px] px-9 py-5 text-center text-[#010101] text-[18px] font-[700] leading-[20px] ;
+        }
+        &__watch{
+            @apply flex items-center text-white text-[18px] font-[500] mt-[90px] space-x-2;
+            &__icon{
+                @apply bg-bg-apple-black-board rounded-lg px-1 py-1;
+            }
+        }
+    }
+
+    .promotion{
+        @apply absolute left-[10%] top-[5%];
+        & h1{
+            @apply text-[3em] text-white font-[700] leading-[6rem] mb-[50px]
+        }
     }
 }

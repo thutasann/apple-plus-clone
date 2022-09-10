@@ -1,0 +1,58 @@
+@layer components{
+    .aboutWrapper{
+        @apply mt-[50px];
+        &__heading{
+            @apply flex flex-col items-center;
+            &__logo{
+                @apply bg-[#2e2e2e] rounded-lg px-2 py-2;
+            }
+            & h1{
+                @apply text-[28px] md:text-[72px] font-[700] leading-[30px] md:leading-[76px] text-center text-[#1d1d1f] mt-4;
+            }
+            & p{
+                @apply text-[17px] font-[400] leading-[25px] text-center text-[#1d1d1f] mt-4;
+                a{
+                    @apply text-[#2a75d2]
+                }
+            }
+        }
+        &__devices{
+            @apply mt-[50px] lg:w-[980px] mx-auto
+            grid grid-cols-3
+            md:grid-cols-5;
+            &__device{
+                @apply flex flex-col items-center justify-center;
+                & p{
+                    @apply text-center text-[19px] font-[600] leading-[23px] mt-3;
+                }
+            }
+        }
+
+        &__stream{
+            @apply flex flex-col items-center mt-[70px];
+            & h2{
+                @apply text-[28px] md:text-[40px] font-[600] leading-[44px] text-center mb-5;
+            }
+            &__cta{
+                &__content{
+                    @apply flex items-center text-[#06c] cursor-pointer hover:underline;
+                    & svg{
+                        @apply mt-[0.5px];
+                    }
+                }
+            }
+            &__device{
+                @apply mt-[50px] lg:w-[980px] mx-[30px] md:mx-[auto]
+                grid grid-cols-3
+                md:grid-cols-5 gap-y-4 gap-x-7;
+                &__item{
+                    @apply flex flex-col items-center justify-center;
+                }
+            }
+        }
+    }
+
+    .spacer{
+        @apply flex flex-col items-center space-y-2;
+    }
+}
