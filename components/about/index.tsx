@@ -111,7 +111,6 @@ const About = () => {
                 <div className='aboutWrapper__stream__device'>
                     {
                         tvs.map((tv, i) => {
-                            console.log(i);
                             return (
                                 <div className='aboutWrapper__stream__device__item' key={i}>
                                     <Image

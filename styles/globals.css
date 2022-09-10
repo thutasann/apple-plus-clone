@@ -3,6 +3,9 @@
 @import "../components/mobile-navbar/index.scss";
 @import "../components/hero/index.scss";
 @import "../components/about/index.scss";
+@import "../components/q&a/index.scss";
+@import "../components/q&a/accordion.scss";
+
 
 
 @tailwind base;
