@@ -1,0 +1,50 @@
+@layer components{
+    .modal {
+        @apply absolute flex lg:hidden flex-col p-8 top-0 left-0 z-[500] w-full h-screen bg-[#333232] font-[700];
+        &__close {
+            @apply absolute  top-8 right-6 w-14 aspect-square rounded-full  grid  place-items-center cursor-pointer;
+            svg{
+                @apply fill-[#1FFF0F] w-[35px] h-[35px] hover:fill-[#4dff7f]; 
+            }
+        }
+        &__navigation {
+            @apply flex flex-col gap-4 mt-[40px];
+
+            &__explore{
+                @apply flex flex-col items-start space-y-2;
+                &__category{
+                    @apply flex items-center py-[10px] px-[11px] rounded-[6px] bg-bg-goblin-green text-text-goblin-green shadow-md cursor-pointer;
+                    & span{
+                        @apply ml-[20px]
+                    }
+                }
+                &__searchBox{
+                    @apply flex items-center justify-between bg-[#ededed] rounded-md w-[260px] py-[10px] px-[12px];
+                    & input{
+                        @apply  bg-[#ededed] outline-none text-[#313235];
+                    }
+                    & svg{
+                        @apply text-text-globin-gray;
+                    }
+                }
+
+                
+            }
+
+            &__links{
+                @apply flex flex-col items-start justify-between space-y-5  text-[16px] w-[206px] text-[#ededed] ;
+            }
+
+            &__auths{
+                @apply flex flex-col items-start justify-between space-y-5 text-[16px] text-[#ededed];
+                a{
+                    @apply text-[#ededed];
+                }
+                & a:last-child{
+                    @apply bg-bg-goblin-green rounded-md px-[40px] py-[10px] font-[700] text-text-goblin-green;
+                }
+            }
+            
+        }
+    }
+}
